@@ -159,24 +159,12 @@ main (int argc, char **argv) {
   // Copy advertising MAC address into options buffer.
   options[0] = 2;           // Option Type - "target link layer address" (Section 4.6 of RFC 4861)
   options[1] = optlen / 8;  // Option Length - units of 8 octets (RFC 4861)
-  // for (i=0; i<6; i++) {
-  //   options[i+2] = (uint8_t) ifr.ifr_addr.sa_data[i];
-  // }
 
   // Westin Josun Busan: longitude 35.155988, latitude 129.154134
   char longitude[14] = "35.1559880000";
   char latitude[14] =  "129.154134000";
   char delimiter[2]=",";
-  // char bufGps[12];
-  // snprintf(bufGps, sizeof(longitude), "%s", longitude);
-  // for (i=0; i<12; i++){
-  //   printf("%x ", bufGps[i]);
-  // }
-  // printf("\n");
-  // printf("%d\n", sizeof(longitude));
 
-  // return 1;
-  // options[2] = (uint8_t);
   for (i = 0; i < sizeof(longitude); i++){
     options[i + 2] = (uint8_t)longitude[i];
   }
@@ -186,21 +174,12 @@ main (int argc, char **argv) {
     options[i + 2 + sizeof(longitude) + 1] = (uint8_t)latitude[i];
   } 
 
-  // Report advertising node MAC address to stdout.
+  // Report advertising node's mobility to stdout.
   printf("Advertising car's VMI for interface %s is ", interface);
   for (i = 0; i < 30; i++){
     printf("%c", options[i + 2]);
   }
   printf("\n");
-
-  // Report advertising node MAC address to stdout.
-  // printf ("Advertising node's MAC address for interface %s is ", interface);
-  // for (i=0; i<5; i++) {
-  //   printf ("%02x:", options[i+2]);
-  // }
-  // printf ("%02x\n", options[5+2]);
-
-
 
   // Find interface index from interface name.
   // This will be put in cmsghdr data in order to specify the interface we want to use.
