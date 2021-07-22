@@ -185,11 +185,17 @@ main (int argc, char **argv) {
   pkt = (uint8_t *) inpack;
   printf ("Type: %u\n", pkt[sizeof (struct nd_neighbor_advert)]);
   printf ("Length: %u (units of 8 octets)\n", pkt[sizeof (struct nd_neighbor_advert) + 1]);
-  printf ("MAC address: ");
-  for (i=2; i<7; i++) {
-    printf ("%02x:", pkt[sizeof (struct nd_neighbor_advert) + i]);
+  // printf ("MAC address: ");
+  // for (i=2; i<7; i++) {
+  //   printf ("%02x:", pkt[sizeof (struct nd_neighbor_advert) + i]);
+  // }
+  // printf ("%02x\n", pkt[sizeof (struct nd_neighbor_advert) + 7]);
+
+  printf("VMI data: ");
+  for (i = 2; i < 32; i++){
+    printf("%c", pkt[sizeof(struct nd_neighbor_advert) + i]);
   }
-  printf ("%02x\n", pkt[sizeof (struct nd_neighbor_advert) + 7]);
+  printf("\n");
 
   close (sd);
 
