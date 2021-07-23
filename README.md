@@ -13,7 +13,7 @@ $ gcc rawsocket_na_rcv.c -o rawsocket_na_rcv
 ```
 
 # Running Step
-* Make sure that the interface name and IPv6 address is properly set in the source code. 
+* Make sure that the interface name and IPv6 address is properly set in the source code. Here we set the interface to "lo" and target ipv6 address to "::1".
 ```c
 // Interface to send packet through.
 strcpy(interface, "lo");
