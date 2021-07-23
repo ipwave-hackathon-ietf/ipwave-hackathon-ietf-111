@@ -1,5 +1,7 @@
 # ipwave-hackathon-ietf-111
 IETF 111 IPWAVE WG Hackathon
+The source code here is based on the implementation of a open source code here:
+https://www.pdbuchan.com/rawsock/rawsock.html
 
 # Prerequisite
 * This source code can be run locally by swtiching the interface name and local IPv6 address to "lo" and "::1", respectively.
