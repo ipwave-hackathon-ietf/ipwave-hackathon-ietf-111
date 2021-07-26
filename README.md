@@ -1,7 +1,7 @@
 # ipwave-hackathon-ietf-111
 IETF 111 IPWAVE WG Hackathon
 
-The source code here is based on the implementation of a open source code here:
+The source code here is based on the implementation of a open source code:
 https://www.pdbuchan.com/rawsock/rawsock.html
 
 A demo in YouTube is here: https://youtu.be/OTYtLOBX1CI
