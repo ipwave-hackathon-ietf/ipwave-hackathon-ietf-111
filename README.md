@@ -10,7 +10,7 @@ A demo in YouTube is here: https://youtu.be/OTYtLOBX1CI
 * This source code can be run locally by swtiching the interface name and local IPv6 address to "lo" and "::1", respectively.
 * This source code can also be run on top of two laptops with AR94xx WiFi module using ath9k driver
   * OCB-enabled linux kernel in Ubuntu 18.04 (https://github.com/ipwave-hackathon-ietf/ipwave-hackathon-ietf-106)
-  * When using two OCB-enabled laptops, the interface name and IPv6 address shall be properly set.
+  * When using two OCB-enabled laptops, one shall properly set the _interface name_ and _IPv6 address_.
 
 # Compiling
 ```shell
